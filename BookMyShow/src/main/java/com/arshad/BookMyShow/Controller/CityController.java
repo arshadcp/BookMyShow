@@ -34,7 +34,7 @@ public class CityController {
 
     @DeleteMapping("/city/{id}")
     public ResponseEntity deleteCity(@PathVariable("id")int cityId)throws Exception{
-        if(cityService.findCityById(cityId)==null){
+        if(cityService.findCity(cityId)==null){
             throw new InvalidIdException("city with id does not exist");
         }
         boolean a=cityService.deleteCity(cityId);
