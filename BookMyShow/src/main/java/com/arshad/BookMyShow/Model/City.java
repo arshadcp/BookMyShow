@@ -21,22 +21,11 @@ public class City extends  BaseModel{
         this.name = name;
         this.theaters = theaters;
     }
-public City(){
-
-}
-    public String getName() {
-        return name;
+    public City() {
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Theater> getTheaters() {
-        return theaters;
-    }
-
-    public void setTheaters(List<Theater> theaters) {
-        this.theaters = theaters;
+    public City(String name) {
+        this.name=name;
     }
 }
+
+

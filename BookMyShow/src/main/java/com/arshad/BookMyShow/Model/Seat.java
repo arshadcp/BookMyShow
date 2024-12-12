@@ -9,9 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-
 public class Seat extends BaseModel{
-    private  int seatNumber;
+    private  String seatNumber;
     @Column(name="bms_rows")
     private int row;
     @Column(name="bms_cols")
@@ -20,4 +19,15 @@ public class Seat extends BaseModel{
     private SeatType seatType;
     @Enumerated(EnumType.STRING)
     private SeatStatus seatStatus;
+
+    public Seat( int row, int col, String seatNumber,SeatType seatType,SeatStatus seatStatus) {
+        this.row = row;
+        this.col = col;
+        this.seatNumber = seatNumber;
+        this.seatType = seatType;
+       this.seatStatus=seatStatus;
+    }
+    public Seat(){
+
+    }
 }

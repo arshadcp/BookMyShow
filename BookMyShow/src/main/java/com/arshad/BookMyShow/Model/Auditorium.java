@@ -24,4 +24,13 @@ public class Auditorium extends BaseModel{
     @Enumerated(EnumType.STRING)
     private List<AuditoriumStatus> audiStatus;
 
+
+    public Auditorium(){
+
+    }
+
+    public Auditorium(String name, int capacity) {
+        this.name = name;
+        Capacity = capacity;
+    }
 }

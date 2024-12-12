@@ -28,5 +28,14 @@ public class TheaterService {
         cityService.saveCity(city);
         return savedTheater;
      }
+     public Theater getTheaterById(int id){
+         return theaterRepository.findById(id).get();
+     }
+    public Theater saveTheater(Theater theater){
+        return theaterRepository.save(theater);
+    }
+    public Theater getTheaterByName(String name){
+         return theaterRepository.findTheaterByName(name);
+    }
 
 }

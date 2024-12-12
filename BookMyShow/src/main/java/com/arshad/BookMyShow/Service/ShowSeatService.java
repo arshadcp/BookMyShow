@@ -14,8 +14,12 @@ public class ShowSeatService {
     public ShowSeat getShowSeat(int showSeatId){
        return showSeatRepository.findById(showSeatId).get();
     }
-    public ShowSeat getSeatByName(ShowSeat seat){
-        return showSeatRepository.save(seat);
+    public ShowSeat saveShowseat(ShowSeat showSeat){
+       return showSeatRepository.save(showSeat);
     }
+//    public ShowSeat getSeatByName(ShowSeat showSeat){
+//        return showSeatRepository.save(showSeat);
+//    }
+
 
 }

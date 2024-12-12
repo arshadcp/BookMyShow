@@ -42,21 +42,21 @@ public class TicketService {
         for(int a:showSeatId){//if available make seat locked and save
                 ShowSeat seat= showSeatService.getShowSeat(a);
                 seat.setShowSeatStatus(ShowSeatStatus.LOCKED);
-                showSeatService.getSeatByName(seat);
+                showSeatService.saveShowseat(seat);
 
         }
       if(payment(showSeatId)) {
 
           for (int a : showSeatId) {
-              ShowSeat seat= showSeatService.getShowSeat(a);
-              seat.setShowSeatStatus(ShowSeatStatus.BOOKED);
+              ShowSeat showSeat= showSeatService.getShowSeat(a);
+              showSeat.setShowSeatStatus(ShowSeatStatus.BOOKED);
                 ticket.setTicketStatus(TicketStatus.BOOKED);
           }
 
       }else{//if payment fail
           for(int a:showSeatId) {
-             ShowSeat seat= showSeatService.getShowSeat(a);
-             seat.setShowSeatStatus(ShowSeatStatus.AVAILABLE);
+             ShowSeat showseat= showSeatService.getShowSeat(a);
+             showseat.setShowSeatStatus(ShowSeatStatus.AVAILABLE);
              ticket.setTicketStatus(TicketStatus.CANCELLED);
           }
       }
