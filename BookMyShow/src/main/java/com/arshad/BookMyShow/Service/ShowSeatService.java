@@ -17,9 +17,9 @@ public class ShowSeatService {
     public ShowSeat saveShowseat(ShowSeat showSeat){
        return showSeatRepository.save(showSeat);
     }
-//    public ShowSeat getSeatByName(ShowSeat showSeat){
-//        return showSeatRepository.save(showSeat);
-//    }
+    public ShowSeat getSeatByName(ShowSeat showSeat){
+        return showSeatRepository.save(showSeat);
+    }
 
 
 }

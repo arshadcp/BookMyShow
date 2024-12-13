@@ -60,7 +60,7 @@ public class InitService {
         audiFeature.add(AuditoriumFeature.DOLBY);
         audiFeature.add(AuditoriumFeature.THREED);
         audi1.setAudiFeature(audiFeature);
-        audi1.setSeats(seatsAudi);
+        //audi1.setSeats(seatsAudi);
         auditoriumService.saveAudi(audi1);
         Auditorium savedAud=auditoriumService.getAuditoriumByName("Venus");
 
@@ -68,7 +68,7 @@ public class InitService {
        List<Auditorium> audiList= new ArrayList<>();
         audiList.add(savedAud);//added auditorium to List
         savedTheaters.setAudi(audiList);//adding list of auditoriums to theater
-       // auditoriumService.saveAudi(audi1);
+
         theaterService.saveTheater(savedTheaters);
 
         Movie movie= new Movie("Avengers","Best movie");
@@ -83,7 +83,7 @@ public class InitService {
         show.setMovie(movieService.findMovieByName("Avengers"));
         Auditorium savedAudi2=auditoriumService.getAuditoriumByName("Venus");
        show.setAuditorium(savedAudi2);
-       Show show1= showService.saveShow(show);
+       Show show1= showService.saveShow(show);//--
 
        for(int i=0;i<5;i++) {//5showseat
            ShowSeat showSeat = new ShowSeat(100,showService.getShowById(1),seatService.getSeatBySeatNumber(i+""+i),ShowSeatStatus.AVAILABLE);

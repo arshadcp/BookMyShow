@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 @Getter
 @Setter
-@Entity(name = "bms_show")
+@Entity(name="bms-show")
 public class Show extends BaseModel{
 
         private String name;

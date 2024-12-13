@@ -1,8 +1,6 @@
 package com.arshad.BookMyShow.Service;
 
 import com.arshad.BookMyShow.Model.City;
-import com.arshad.BookMyShow.Model.Seat;
-import com.arshad.BookMyShow.Model.Theater;
 import com.arshad.BookMyShow.Repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
