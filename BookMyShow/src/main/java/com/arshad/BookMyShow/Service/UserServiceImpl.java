@@ -5,8 +5,8 @@ import com.arshad.BookMyShow.Exceptions.invalidEmailException;
 import com.arshad.BookMyShow.Exceptions.invalidPasswordException;
 import com.arshad.BookMyShow.Model.User;
 import com.arshad.BookMyShow.Repository.UserRepository;
+import com.arshad.BookMyShow.Service.Interface.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 
 @Service
-public class UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
   private  UserRepository userRepository;
 

@@ -1,14 +1,12 @@
 package com.arshad.BookMyShow.Service;
 
 import com.arshad.BookMyShow.Exceptions.SeatNotAvailableException;
-import com.arshad.BookMyShow.Model.City;
 import com.arshad.BookMyShow.Model.Enum.ShowSeatStatus;
 import com.arshad.BookMyShow.Model.Enum.TicketStatus;
 import com.arshad.BookMyShow.Model.ShowSeat;
 import com.arshad.BookMyShow.Model.Ticket;
-import com.arshad.BookMyShow.Model.User;
 import com.arshad.BookMyShow.Repository.TicketRepository;
-import jakarta.persistence.criteria.CriteriaBuilder;
+import com.arshad.BookMyShow.Service.Interface.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -18,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TicketService {
+public class TicketServiceImpl implements TicketService {
    @Autowired
     private TicketRepository ticketRepository;
    @Autowired
-   private ShowSeatService showSeatService;
+   private ShowSeatServiceImpl showSeatService;
 
     public String greet(){
        return "Hello World";

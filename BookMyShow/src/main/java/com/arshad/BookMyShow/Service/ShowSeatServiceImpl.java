@@ -1,13 +1,13 @@
 package com.arshad.BookMyShow.Service;
 
-import com.arshad.BookMyShow.Model.Enum.ShowSeatStatus;
 import com.arshad.BookMyShow.Model.ShowSeat;
 import com.arshad.BookMyShow.Repository.ShowSeatRepository;
+import com.arshad.BookMyShow.Service.Interface.ShowSeatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ShowSeatService {
+public class ShowSeatServiceImpl implements ShowSeatService {
     @Autowired
     ShowSeatRepository showSeatRepository;
 //

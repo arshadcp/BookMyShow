@@ -2,8 +2,8 @@ package com.arshad.BookMyShow.Controller;
 
 import com.arshad.BookMyShow.DTO.UserLoginRequestDTO;
 import com.arshad.BookMyShow.DTO.UserSignUpRequestDTO;
-import com.arshad.BookMyShow.Model.User;
-import com.arshad.BookMyShow.Service.UserService;
+import com.arshad.BookMyShow.Service.Interface.UserService;
+import com.arshad.BookMyShow.Service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

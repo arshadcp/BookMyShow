@@ -2,6 +2,7 @@ package com.arshad.BookMyShow.Service;
 
 import com.arshad.BookMyShow.Model.*;
 import com.arshad.BookMyShow.Model.Enum.*;
+import com.arshad.BookMyShow.Service.Interface.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class InitService {
+public class InitServiceImpl implements InitService {
     @Autowired
     CityService cityService;
     @Autowired
@@ -52,7 +53,7 @@ public class InitService {
             seatService.saveSeat(seat);
            // Seat savedseat1 = seatService.getSeatBySeatNumber(i+ "" + i);
         }
-        List<Seat> seatsAudi=seatService.seatRepository.findAll();//return all the data of the table
+        List<Seat> seatsAudi=seatService.findAllSeat();//return all the data of the table
 
         Auditorium audi1=new Auditorium("Venus",5);
 

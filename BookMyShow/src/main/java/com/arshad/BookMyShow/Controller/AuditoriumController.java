@@ -1,7 +1,7 @@
 package com.arshad.BookMyShow.Controller;
 
 import com.arshad.BookMyShow.DTO.AuditoriumRequestDTO;
-import com.arshad.BookMyShow.Service.AuditoriumService;
+import com.arshad.BookMyShow.Service.Interface.AuditoriumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

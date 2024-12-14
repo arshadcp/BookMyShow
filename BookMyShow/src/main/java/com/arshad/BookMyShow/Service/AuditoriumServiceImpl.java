@@ -3,18 +3,18 @@ package com.arshad.BookMyShow.Service;
 import com.arshad.BookMyShow.Model.Auditorium;
 import com.arshad.BookMyShow.Model.Theater;
 import com.arshad.BookMyShow.Repository.AuditoriumRepository;
-import com.arshad.BookMyShow.Repository.TheaterRepository;
+import com.arshad.BookMyShow.Service.Interface.AuditoriumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class AuditoriumService {
+public class AuditoriumServiceImpl implements AuditoriumService {
     @Autowired
     AuditoriumRepository auditoriumRepository;
     @Autowired
-    TheaterService theaterService;
+    TheaterServiceImpl theaterService;
 
     public Auditorium saveAudi(String name, int capacity,int theaterId){
         Auditorium audi =new Auditorium();

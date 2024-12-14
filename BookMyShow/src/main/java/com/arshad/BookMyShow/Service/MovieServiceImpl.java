@@ -2,11 +2,12 @@ package com.arshad.BookMyShow.Service;
 
 import com.arshad.BookMyShow.Model.Movie;
 import com.arshad.BookMyShow.Repository.MovieRepository;
+import com.arshad.BookMyShow.Service.Interface.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MovieService {
+public class MovieServiceImpl implements MovieService {
     @Autowired
     MovieRepository movieRepository;
 

@@ -2,13 +2,14 @@ package com.arshad.BookMyShow.Service;
 
 import com.arshad.BookMyShow.Model.City;
 import com.arshad.BookMyShow.Repository.CityRepository;
+import com.arshad.BookMyShow.Service.Interface.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CityService {
+public class CityServiceImpl implements CityService {
     @Autowired
    private CityRepository cityRepository;
 
