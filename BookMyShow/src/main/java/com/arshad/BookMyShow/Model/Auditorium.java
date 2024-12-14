@@ -22,7 +22,7 @@ public class Auditorium extends BaseModel{
     @Enumerated(EnumType.STRING)
     private List<AuditoriumFeature> audiFeature;
     @Enumerated(EnumType.STRING)
-    private List<AuditoriumStatus> audiStatus;
+    private AuditoriumStatus audiStatus;
 
 
     public Auditorium(){

@@ -11,6 +11,6 @@ import java.util.List;
 @Entity
 public class Actor extends  BaseModel{
     private String name;
-    @ManyToMany
+    @ManyToMany(mappedBy ="actor" )
     private List<Movie> movie;
 }
