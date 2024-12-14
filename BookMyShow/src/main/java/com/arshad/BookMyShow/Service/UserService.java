@@ -30,9 +30,7 @@ public class UserService {
         if(encoder.matches(password,saveduser.getPassword())){
            return saveduser;
         }
-//        if(a.equals(passe)){
-//            return user;
-//        }
+
         throw new invalidPasswordException("wrong password");
 
     }
@@ -45,8 +43,8 @@ public class UserService {
         user.setName(name);
         user.setEmail(email);
         BCryptPasswordEncoder encoder =new BCryptPasswordEncoder();
-        String pass=encoder.encode(password);
-        user.setPassword(pass);
+
+        user.setPassword(encoder.encode(password));
         user.setTickets(new ArrayList<>());
        return userRepository.save(user);
     }
