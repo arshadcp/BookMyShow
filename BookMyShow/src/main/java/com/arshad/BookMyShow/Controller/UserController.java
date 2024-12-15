@@ -1,7 +1,9 @@
 package com.arshad.BookMyShow.Controller;
 
+import Mapper.EntityDTOMapper;
 import com.arshad.BookMyShow.DTO.UserLoginRequestDTO;
 import com.arshad.BookMyShow.DTO.UserSignUpRequestDTO;
+import com.arshad.BookMyShow.Model.User;
 import com.arshad.BookMyShow.Service.Interface.UserService;
 import com.arshad.BookMyShow.Service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +20,15 @@ public class UserController {
 
     @PostMapping("/SignUp")
     public ResponseEntity UsersignUp(@RequestBody UserSignUpRequestDTO userSignUpRequestDTO) throws Exception{
-        return ResponseEntity.ok( userService.Signup(userSignUpRequestDTO.getName(),
-                userSignUpRequestDTO.getEmail(),userSignUpRequestDTO.getPassword()));
+        User user= userService.Signup(userSignUpRequestDTO.getName(),
+                userSignUpRequestDTO.getEmail(),userSignUpRequestDTO.getPassword());
+        return ResponseEntity.ok(EntityDTOMapper.toDTO(user));
     }
 
     @GetMapping("/login")
     public ResponseEntity UserLogin(@RequestBody UserLoginRequestDTO userLoginRequestDTO){
-       return ResponseEntity.ok( userService.Login(userLoginRequestDTO.getEmail()
+      return ResponseEntity.ok( userService.Login(userLoginRequestDTO.getEmail()
                 ,userLoginRequestDTO.getPassword()));
+
     }
 }
